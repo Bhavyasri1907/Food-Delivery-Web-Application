@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍔 Online Food App
 
 A full-stack MERN (MongoDB, Express.js, React.js, Node.js) food ordering application with separate Admin and Customer modules.
@@ -58,47 +59,81 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) food ordering applica
 
 ## Getting Started
 
+# Food Delivery Web Application
+
+A full-stack MERN (MongoDB, Express, React, Node.js) food ordering platform with Customer, Admin, and Delivery modules.
+
+## Features
+
+### Customer
+- Browse restaurants and menus
+- Add items to cart and place orders
+- Track order progress
+- View order history
+- Submit ratings and feedback
+
+### Admin
+- Manage restaurants and dishes
+- Manage orders and status updates
+- View dashboard analytics
+- Review customer feedback
+
+### Delivery
+- Delivery login and profile
+- View assigned orders
+- Update delivery progress
+
+### Authentication and Security
+- JWT-based authentication
+- Password hashing with bcrypt
+- Role-based protected routes
+
+## Tech Stack
+
+- Frontend: React 18, React Router, Context API, Bootstrap 5, Chart.js
+- Backend: Node.js, Express.js, Mongoose, JWT, bcrypt, Multer
+- Database: MongoDB
+
+## Project Structure
+
+```text
+backend/
+   middleware/
+   models/
+   routes/
+   utils/
+   server.js
+
+frontend/
+   public/
+   src/
+      components/
+      context/
+      pages/
+```
+
+## Getting Started
+
 ### Prerequisites
-- Node.js (v16+)
-- MongoDB (running locally on port 27017)
+- Node.js 16+
+- MongoDB running locally
 
-### Installation & Running
+### Backend
 
-1. **Start MongoDB** (make sure it's running on `localhost:27017`)
+```bash
+cd backend
+npm install
+npm run dev
+```
 
-2. **Backend:**
-   ```bash
-   cd backend
-   npm install
-   npm run dev
-   ```
-   Server runs on `http://localhost:5000`
+Backend runs on http://localhost:5000
 
-3. **Frontend:**
-   ```bash
-   cd frontend
-   npm install
-   npm start
-   ```
-   App runs on `http://localhost:3000`
+### Frontend
 
-## API Endpoints
+```bash
+cd frontend
+npm install
+npm start
+```
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | /api/auth/register | Register user |
-| POST | /api/auth/login | Login user |
-| GET | /api/auth/me | Get current user |
-| GET | /api/restaurants | List restaurants |
-| GET | /api/restaurants/meta/cities | Get cities |
-| POST | /api/restaurants | Add restaurant (admin) |
-| GET | /api/dishes/restaurant/:id | Get dishes by restaurant |
-| POST | /api/dishes | Add dish (admin) |
-| GET | /api/cart | Get cart |
-| POST | /api/cart/add | Add to cart |
-| POST | /api/orders/place | Place order |
-| GET | /api/orders/my | Customer orders |
-| GET | /api/orders/admin | Admin orders |
-| PUT | /api/orders/:id/status | Update order status |
-| POST | /api/feedback | Submit feedback |
-| GET | /api/stats/dashboard | Admin dashboard stats |
+Frontend runs on http://localhost:3000
